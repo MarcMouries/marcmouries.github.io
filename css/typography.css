@@ -1,3 +1,8 @@
 body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  }
+}
+
+.subheader-text {
+  font-size: 20px;
+  font-weight: 700;
+}
