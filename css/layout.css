@@ -5,29 +5,92 @@
     gap: 96px;
   }
 
-  /* Project Section */
 
 #my-work-section {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 1rem;
 }
-#my-work-section {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+
+.header {
+    padding: 2rem;
 }
+
+.header > h1 {
+  font-size: 3rem;
+  padding-bottom: 1rem;
+}
+
+.header > article > ul > li > p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #666666;
+}
+
+.project-list {
+  padding: 2rem;
+}
+.project-list > ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 1rem;
+}
+
+.project-list > ul > li {
+  border: 1px solid #E2E2E2;
+  border-radius: .5rem;
+}
+
+.project-list > ul > li > figure {
+  max-height: 220px;
+  overflow: hidden;
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+  position: relative;
+}
+
+.project-list > ul > li > figure > img {
+  width: 100%;
+}
+
+.project-list > ul > li > figure > figcaption {
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0,0,0,.7);
+  width: 100%;
+}
+
+.project-list > ul > li > figure > figcaption > h3 {
+  color: white;
+  padding: .75rem;
+  font-size: 1.25rem;
+}
+
+.project-list > ul > li > p {
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 1rem .75rem;
+  color: #666666;
+}
+
+__.project-list > ul > li > a {
+  padding: .5rem 1rem;
+  margin: .5rem;
+}
+
 
 .projects-container {
   display: flex;
   gap: 34px 16px;
-  flex-wrap: wrap;
+  _flex-wrap: wrap;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
 }
 
     /* Project Cards */
 
     .project-card {
-      max-width: calc((100% - 32px) / 3);
+      _max-width: calc((100% - 32px) / 3);
       display: flex;
       flex-direction: column;
       gap: 34px;
@@ -36,7 +99,7 @@
     .project-card-text-container {
       flex-direction: column;
       display: flex;
-      gap: 16px;
+      gap: 1rem;
       height: 6rem;
     }
 
@@ -47,55 +110,43 @@
       object-position: center;
     }
 
-    /* Extra Extra large devices (large laptops and desktops, 1200px and below) */
-@media only screen and (max-width: 1600px) {
-  #main-content {
-    margin: 225px 275px;
-  }
-}
 
-/* Extra large devices (large laptops and desktops, 1200px and below) */
-@media only screen and (max-width: 1200px) {
-  #main-content {
-    margin: 225px 175px;
-  }
-}
 
-/* Large devices (laptops/desktops, 1000px and below) */
-@media only screen and (max-width: 1000px) {
-  #main-content {
-    margin: 225px 75px;
-  }
-}
 
-/* Small devices (portrait tablets and large phones, 800px and below) */
-@media only screen and (max-width: 800px) {
-  #main-content {
-    margin: 150px 50px;
-  }
 
-  #portfolio-header {
-    flex-direction: column;
-  }
 
-  .project-card {
-    max-width: calc((100% - 16px) / 2);
-  }
-}
-
-/* Small devices (portrait tablets and large phones, 600px and below) */
-@media only screen and (max-width: 600px) {
-  #main-content {
-    margin: 125px 20px;
-  }
-
-  .project-card {
-    max-width: 100%;
-  }
-}
 
 
 /* BUTTONS */
+
+a.button2 {
+  border: 3px solid #141414;
+  border-radius: 50px;
+  color: black;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0.6rem ;
+  padding-bottom: 0.6rem ;
+  padding-left: 1.0rem;
+  padding-right: 2.5rem;
+  width: fit-content;
+  position: relative;
+  margin: 0.5rem;
+
+}
+
+a.button2:after {
+  content: "";
+  position: absolute;
+  background: url(../assets/icons/arrow-right.svg) no-repeat center;
+  width: 1.25rem;  /* 20px */
+  height: 1.25rem;  /* 20px */
+  right: 1rem;  /* 16px */
+}
+
+
 
 a.button {
   padding: 8px 16px;
@@ -107,4 +158,6 @@ a.button {
   display: flex;
   gap: 5px;
   align-items: center;
+  margin: 0.5rem;
+
 }
